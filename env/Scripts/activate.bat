@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\LatitudeTechnolabs_Trainee_Stuff\FastAPI\FAST_API\FastAPI\env
+set VIRTUAL_ENV=C:\LatitudeTechnolabs_Trainee_Stuff\FastAPI\FAST_API\env
 
 if not defined PROMPT set PROMPT=$P$G
 
