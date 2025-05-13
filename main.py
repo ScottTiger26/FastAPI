@@ -1,7 +1,9 @@
-from fastapi import FastAPI, Header, status
+from fastapi import FastAPI, status
 from fastapi.exceptions import HTTPException
-from typing import Optional, List
-from pydantic import BaseModel
+from typing import List
+# from pydantic import BaseModel
+from FastAPI.src.Book.book_data import books
+from FastAPI.src.Book.schemas import Book, BookUpdate
 
 app = FastAPI()
 
@@ -47,97 +49,6 @@ app = FastAPI()
 
 
 # ********************************************** CRUD *************************************
-books = [
-    {
-        "id": 1,
-        "title": "Think Python",
-        "author": "Allen B. Downy",
-        "publisher": "O'Reilly Media",
-        "published_date": "2020-01-01",
-        "page_count": 1234,
-        "language": "English",
-    },
-    {
-        "id": 2,
-        "title": "Think Different",
-        "author": "Allen V. Downy",
-        "publisher": "O'Reilly Media",
-        "published_date": "2020-01-01",
-        "page_count": 1144,
-        "language": "English",
-    },
-    {
-        "id": 3,
-        "title": "Python Vibes",
-        "author": "Rodriguez B. Downy",
-        "publisher": "Tata MacGraw Hill",
-        "published_date": "2025-01-01",
-        "page_count": 1342,
-        "language": "Sanskrit",
-    }
-]
 
-class Book(BaseModel):
-    id: int
-    title: str
-    author: str
-    publisher: str
-    published_date: str
-    page_count: int
-    language: str
-# Model to Update
-class BookUpdate(BaseModel):
-    title: str
-    author: str
-    publisher: str
-    page_count: int
-    language: str
 
 # CRUD Routing
-@app.get("/books", response_model=List[Book])
-async def get_all_books():
-    return books
-
-@app.post("/books", status_code=status.HTTP_201_CREATED)
-async def create_a_book(book_data: Book) -> dict:
-    new_book = book_data.model_dump() # It converts the new_book to dictionary
-    books.append(new_book)
-    return new_book
-
-@app.get("/books/{book_id}")
-async def get_a_book(book_id: int) -> dict:
-    for book in books:
-        if book['id'] == book_id:
-            return book
-    raise HTTPException(
-        status_code=status.HTTP_404_NOT_FOUND,
-        detail= "Book not Found"
-    )
-
-@app.patch("/books/{book_id}")
-async def update_a_book(book_id: int, book_update_data: BookUpdate) -> dict:
-    for book in books:
-        if book["id"] == book_id:
-            book["title"] = book_update_data.title
-            book["author"] = book_update_data.author
-            book["publisher"] = book_update_data.publisher
-            book["page_count"] = book_update_data.page_count
-            book["language"] = book_update_data.language
-
-            return book
-    raise HTTPException(
-        status_code=status.HTTP_404_NOT_FOUND,
-        detail="Book Does not exist."
-    )
-
-@app.delete("/books/{book_id}", status_code=status.HTTP_204_NO_CONTENT)
-async def delete_a_book(book_id: int):
-    for book in books:
-        if book["id"] == book_id:
-            books.remove(book)
-
-        return {}
-    raise HTTPException(
-        status_code=status.HTTP_404_NOT_FOUND,
-        detail = "Book not found"
-    )
