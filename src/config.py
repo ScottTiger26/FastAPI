@@ -1,18 +1,41 @@
-from pydantic_settings import BaseSettings
-from pydantic import ConfigDict
+# from pydantic_settings import BaseSettings, SettingsConfigDict
+#
+#
+# class Settings(BaseSettings):
+#     DATABASE_URL: str
+#
+#     model_config = SettingsConfigDict(
+#         env_file="./.env",
+#         extra="ignore"
+#     )
+#
+#
+# Config = Settings()
 
+# *******************************************************
+# config.py
+
+import os
+from dotenv import load_dotenv
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+# --- 1) load your .env file into os.environ
+#     this must happen *before* BaseSettings instantiates
+env_path = os.path.join(os.path.dirname(__file__), "./.env")
+load_dotenv(env_path)
 
 class Settings(BaseSettings):
-    DATABASE_URL: str  # Must match exactly with .env variable name
+    DATABASE_URL: str  # now guaranteed to come from os.environ
 
-    model_config = ConfigDict(
-        env_file=".env",
-        env_file_encoding="utf-8",
-        extra="ignore"
+    model_config = SettingsConfigDict(
+        # you can still keep this here for future overrides,
+        # but python-dotenv already loaded your vars
+        env_file="./.env",
+        extra="ignore",
     )
 
+# instantiate now picks up DATABASE_URL from os.environ
+Config = Settings()
 
-# Test the configuration
 if __name__ == "__main__":
-    settings = Settings()
-    print(f"Database configuration loaded: {settings.DATABASE_URL[:20]}...")  # Print first 20 chars for security
+    print("Loaded DATABASE_URL:", Config.DATABASE_URL)
