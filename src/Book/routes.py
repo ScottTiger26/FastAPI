@@ -16,7 +16,7 @@ async def create_a_book(book_data: Book) -> dict:
     books.append(new_book)
     return new_book
 
-@book_router.get("//{book_id}")
+@book_router.get("/{book_id}")
 async def get_a_book(book_id: int) -> dict:
     for book in books:
         if book['id'] == book_id:
@@ -26,7 +26,7 @@ async def get_a_book(book_id: int) -> dict:
         detail= "Book not Found"
     )
 
-@book_router.patch("//{book_id}")
+@book_router.patch("/{book_id}")
 async def update_a_book(book_id: int, book_update_data: BookUpdate) -> dict:
     for book in books:
         if book["id"] == book_id:
@@ -42,7 +42,7 @@ async def update_a_book(book_id: int, book_update_data: BookUpdate) -> dict:
         detail="Book Does not exist."
     )
 
-@book_router.delete("//{book_id}", status_code=status.HTTP_204_NO_CONTENT)
+@book_router.delete("/{book_id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_a_book(book_id: int):
     for book in books:
         if book["id"] == book_id:

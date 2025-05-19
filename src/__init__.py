@@ -21,4 +21,9 @@ app = FastAPI(
     life_span=life_span
 
 )
+
+# Run init_db on startup
+@app.on_event("startup")
+async def on_startup():
+    await init_db()
 app.include_router(book_router, prefix=f"/api/{version}/books", tags=['books'])

@@ -5,61 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edb9be44-7eca-40cb-9327-f2b3cd3020ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel-0.0.24.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel-0.0.24.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel-0.0.24.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel-0.0.24.dist-info/REQUESTED" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel-0.0.24.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel-0.0.24.dist-info/entry_points.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel-0.0.24.dist-info/licenses/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/_compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/default.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/ext/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/ext/asyncio/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/ext/asyncio/session.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/orm/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/orm/session.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/pool/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/py.typed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/sql/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/sql/_expression_select_cls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/sql/_expression_select_gen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/sql/_expression_select_gen.py.jinja2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/sql/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/sql/expression.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env/Lib/site-packages/sqlmodel/sql/sqltypes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/db/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Book/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click-8.2.0.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click-8.2.0.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click-8.2.0.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click-8.2.0.dist-info/REQUESTED" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click-8.2.0.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click-8.2.0.dist-info/licenses/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/_compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/_compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/_termui_impl.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/_termui_impl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/_textwrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/_textwrap.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/_winconsole.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/_winconsole.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/formatting.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/formatting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/globals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/shell_completion.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/shell_completion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/termui.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/termui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/types.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/types.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Scripts/fastapi.exe" beforeDir="false" afterPath="$PROJECT_DIR$/env/Scripts/fastapi.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/.env" beforeDir="false" afterPath="$PROJECT_DIR$/src/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Book/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +28,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Programs/Python/Python39/Lib/site-packages/sqlmodel/main.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
