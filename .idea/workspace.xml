@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edb9be44-7eca-40cb-9327-f2b3cd3020ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Book/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Book/service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.env" beforeDir="false" afterPath="$PROJECT_DIR$/src/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Book/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Book/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Book/schemas.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
