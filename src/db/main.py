@@ -1,8 +1,10 @@
 # This is a sql engine i.e. it will handle everything related to database And it is going to be an async engine.
 from sqlmodel import create_engine, text, SQLModel
 from sqlalchemy.ext.asyncio import AsyncEngine
+from sqlalchemy.ext.asyncio.session import AsyncSession
 from src.config import Config
 from src.Book.models import Book
+from sqlalchemy.orm import sessionmaker
 
 engine = AsyncEngine(
 create_engine(
@@ -21,7 +23,11 @@ async def init_db():
 # result = await conn.execute(statement)
 # print(result.all())
 
-
-
+async def get_session() -> AsyncSession:
+    Session = sessionmaker(
+        bind=engine, class_=AsyncSession, expire_on_commit=False
+    )
+    async with Session() as session:
+        yield session
 
 

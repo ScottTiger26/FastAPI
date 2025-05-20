@@ -3,27 +3,25 @@ from .Book.routes import book_router
 from contextlib import asynccontextmanager
 from src.db.main import init_db
 
-
+version = "v1.0.0"
 
 @asynccontextmanager
-async def life_span(app: FastAPI):
-    print(f"Server is starting ...")
+async def lifespan(app: FastAPI):
+    print("Server is starting...")
     await init_db()
-    yield                               # This will decide what will run first and second. Usually the one written above will run first.
-    print(f"Server has been stopped.")
-
-version = "v1.0.0"
+    yield
+    print("Server has been stopped.")
 
 app = FastAPI(
     title="Bookly",
     description="A REST API for book review web service",
     version=version,
-    life_span=life_span
-
+    lifespan=lifespan  # Note: lowercase 'lifespan'
 )
 
-# Run init_db on startup
-@app.on_event("startup")
-async def on_startup():
-    await init_db()
-app.include_router(book_router, prefix=f"/api/{version}/books", tags=['books'])
+# Include the router with proper prefix
+app.include_router(
+    book_router,
+    prefix=f"/api/{version}",  # Remove '/books' from here since it's in the router
+    tags=['Books']
+)
